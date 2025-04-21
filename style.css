@@ -67,6 +67,7 @@ form input::-webkit-color-swatch {
     position: absolute;
     top: 60px;
     left: 50px;
+    user-select: none;
 } 
 
 .list .close__note {
