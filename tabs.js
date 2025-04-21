@@ -13,6 +13,7 @@ class DragAndDrop {
     selectors = {
         root: `[data-js-list]`,
         rootBtn: `[data-js-btn]`,
+        rootColor: `[data-js-color]`,
         innerHtml: `
          <span class="close__note">x</span>
         <textarea name="user note" id="" 
@@ -59,7 +60,10 @@ class DragAndDrop {
 
         newNote.classList.add(this.classList.isListNote)
         newNote.innerHTML = this.selectors.innerHtml
-        newNote.style.borderColor = this.classList.isColor.valueOf
+
+        const changeColor = this.classList.isColor = document.querySelector(this.selectors.rootColor)
+
+        newNote.style.borderColor = changeColor.value
 
         this.classList.isList.appendChild(newNote)
         
